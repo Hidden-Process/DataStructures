@@ -1,4 +1,4 @@
-#Estructura de Datos
+# Estructura de Datos
 
 ## Bloque 1: Programación Funcional
 
