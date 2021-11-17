@@ -8,5 +8,7 @@
 
 ## Bloque 2: Tipos Abstractos de Datos
 
-***TAD Bolsa:*** [P3 - TAD Bag](https://github.com/Hidden-Process/DataStructures/tree/main/P3-Bag)
+***TAD Bolsa (Haskell):*** [P3 - TAD Bag](https://github.com/Hidden-Process/DataStructures/tree/main/P3-Bag)
+
+***TAD Bolsa (Java):*** [P4 - TAD Bag](https://github.com/Hidden-Process/DataStructures/tree/main/P4-Bag)
 
