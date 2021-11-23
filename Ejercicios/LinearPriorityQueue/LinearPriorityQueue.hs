@@ -1,9 +1,3 @@
--------------------------------------------------------------------------------
--- Linear implementation of Priority Queues
---
--- Data Structures. Grado en Informática. UMA.
--------------------------------------------------------------------------------
-
 module DataStructures.PriorityQueue.LinearPriorityQueue
   ( PQueue
 -- basicas  
@@ -41,20 +35,20 @@ isEmpty _     = False
 -- enqueue. Encola un elemento en una cola de prioridad.
 -- 0.50
 enqueue :: (Ord a) => a ->PQueue a -> PQueue a
-enqueue x Empty = (Node x (Empty))
+enqueue x Empty = Node x Empty
 enqueue x (Node y pq)  | x < y     = Node x (Node y pq)
                        | otherwise = Node y (enqueue x pq)
 
 -- first. Devuelve el primer elemento de una cola de prioridad.
 -- 0.25
 first :: PQueue a -> a
-first Empty       = error "first on empty PQ"
+first Empty       = error "First on empty PQ"
 first (Node x pq) = x
 
 -- dequeue. Desencola el primer elemento de una cola de prioridad.
 -- 0.25
 dequeue :: PQueue a -> PQueue a
-dequeue Empty       = error "dequeue on empty PQ"
+dequeue Empty       = error "Dequeue on empty PQ"
 dequeue (Node x pq) = pq
 
 -- mkPQ. Crea una cola de prioridad con los elementos de la lista.
@@ -67,15 +61,16 @@ mkPQ = foldr enqueue empty
 -- Cuidado con esta función. Hay que mantener que sea cola de prioridad
 -- 1.00 (1.00 con plegado, 0.75 en otro caso)
 mapPQ :: (Ord a, Ord b) => (a -> b) -> PQueue a -> PQueue b
-mapPQ f Empty = Empty
-mapPQ f (Node x pq) = Node (f x) (mapPQ f pq)
+mapPQ f Empty       = Empty
+mapPQ f (Node x pq) = enqueue (f x) (mapPQ f pq)
 
 -- filterPQ. Crea una cola de prioridad con los elementos de la cola 
 -- de prioridad dada que cumplen el predicado.
 -- 0.75
 filterPQ :: Ord a => (a -> Bool) -> PQueue a -> PQueue a
-filterPQ f Empty       = Empty
-filterPQ f (Node x pq) = if f x then Node x (filterPQ f pq) else filterPQ f pq
+filterPQ f Empty = Empty
+filterPQ f (Node x pq) | f x       = Node x (filterPQ f pq)
+                       | otherwise = filterPQ f pq
 
 -- foldrPQ. Realiza un plegado por la derecha de la cola de prioridad
 -- usando la funcion y el caso base dados
@@ -90,7 +85,7 @@ foldrPQ f z (Node x pq) = f x (foldrPQ f z pq)
 -- 1.00 (1.00 recursiva. 0.25 con filterPQ)
 fromPQ :: Ord a => a -> PQueue a -> PQueue a
 fromPQ v Empty = Empty
-fromPQ v (Node x pq) | x >= v    = Node x (fromPQ v pq)
+fromPQ v (Node x pq) | x >= v    = Node x pq
                      | otherwise = fromPQ v pq
 
 -- toPQ. Devuelve una cola hasta los elementos menores que uno dado.
@@ -99,22 +94,23 @@ fromPQ v (Node x pq) | x >= v    = Node x (fromPQ v pq)
 toPQ :: Ord a => a -> PQueue a -> PQueue a
 toPQ v Empty = Empty
 toPQ v (Node x pq) | x < v     = Node x (toPQ v pq)
-                   | otherwise = toPQ v pq
+                   | otherwise = Empty
 
 -- toList. Devuelve una lista con los elementos de la cola
 -- Es buena solución hacerlo con un plegado
 -- 1.00 (1.00 con plegado. 0.75 en otro caso)
 toList :: Ord a => PQueue a -> [a]
-toList = foldrPQ(\x pq -> [x] ++ pq) []
+toList = foldrPQ (:) []
+--toList = foldrPQ(\x pq -> [x] ++ pq) []
 
 -- p_pqinversa. Propiedades que comprueban si mkPQ y toList son inversas una 
 -- de la otra
 -- 0.50
 p_pqinversa1 :: (Ord a) => PQueue a -> Bool
-p_pqinversa1 _ = undefined 
+p_pqinversa1 q = mkPQ(toList q) == q 
 
 p_pqinversa2 :: (Ord a) => [a] -> Bool
-p_pqinversa2 _ = undefined
+p_pqinversa2 xs = toList(mkPQ xs) == xs
 
 -- Tabla de complejidades
 -- Completar 
@@ -129,7 +125,7 @@ p_pqinversa2 _ = undefined
 -- | first     |   O(1)      |
 -- | dequeue   |   O(1)      |
 -- | mkPQ      |   O(n)      |
--- | mapPQ     |   O(n)      |
+-- | mapPQ     |   O(n^2)    |
 -- | filterPQ  |   O(n)      |
 -- | foldrPQ   |   O(n)      |
 -- | fromPQ    |   O(n)      |
@@ -171,14 +167,6 @@ s10 = toList s1
 -- [1,2,4,5,5,6,7,7,8,8,9]
 
 
-
-
-
-
-
-
-
-
 -- ===============================================
 --   NO TOCAR ESTA PARTE
 -- ===============================================
@@ -201,5 +189,3 @@ instance (Ord a, Arbitrary a) => Arbitrary (PQueue a) where
     arbitrary =  do
       xs <- listOf arbitrary
       return (foldr enqueue empty xs)
-
-
