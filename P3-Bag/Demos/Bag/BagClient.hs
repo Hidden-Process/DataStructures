@@ -28,7 +28,8 @@ list2Bag = foldr insert empty
 -- [('a',5),('b',2),('c',1),('d',1),('r',2)]
 
 bag2List :: Ord a => Bag a -> [(a, Int)]
-bag2List bag = foldBag(\x ox s -> [(x,ox)] ++s ) [] bag
+bag2List = foldBag(\x ox s -> (x,ox) : s) []
+--bag2List bag = foldBag(\x ox s -> [(x,ox)] ++s ) [] bag
 
 -- Determina si contiene una bolsa a un elemento
 --
