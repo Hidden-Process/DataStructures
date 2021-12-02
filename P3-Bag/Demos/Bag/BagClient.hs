@@ -29,6 +29,7 @@ list2Bag = foldr insert empty
 
 bag2List :: Ord a => Bag a -> [(a, Int)]
 bag2List = foldBag(\x ox s -> (x,ox) : s) []
+
 --bag2List bag = foldBag(\x ox s -> [(x,ox)] ++s ) [] bag
 
 -- Determina si contiene una bolsa a un elemento
@@ -45,4 +46,4 @@ contains x bag = or (foldBag(\y oy s -> [x==y] ++ s) [] bag)
 -- 5
 
 maxOcurrences :: Ord a => Bag a -> Int
-maxOcurrences bag = foldBag (\x ox s -> max ox s) 0 bag
+maxOcurrences = foldBag (\x ox s -> max ox s) 0
