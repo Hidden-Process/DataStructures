@@ -12,9 +12,9 @@
 
 ***TAD Bolsa (Java):*** [P4 - TAD Bag](https://github.com/Hidden-Process/DataStructures/tree/main/P4-Bag)
 
-### Bloque 3: Árboles
+## Bloque 3: Árboles
 
-***Montículos Maxifóbicos (Haskell):*** [P5 - Maxiphobics] (https://github.com/Hidden-Process/DataStructures/tree/main/P5-Maxiphobic/Haskell)
+***Montículos Maxifóbicos (Haskell):*** [P5 - Maxiphobics](https://github.com/Hidden-Process/DataStructures/tree/main/P5-Maxiphobic/Haskell)
 
-***Montículos Maxifóbicos (Java):*** [P5 - Maxiphobics] (https://github.com/Hidden-Process/DataStructures/tree/main/P5-Maxiphobic/Java)
+***Montículos Maxifóbicos (Java):*** [P5 - Maxiphobics](https://github.com/Hidden-Process/DataStructures/tree/main/P5-Maxiphobic/Java)
 
