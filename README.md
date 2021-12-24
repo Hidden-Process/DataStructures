@@ -18,3 +18,6 @@
 
 ***Montículos Maxifóbicos (Java):*** [P5 - Maxiphobics](https://github.com/Hidden-Process/DataStructures/tree/main/P5-Maxiphobic/Java)
 
+***Sparse Vector (Haskell):*** [P6 - Sparse Vector](https://github.com/Hidden-Process/DataStructures/tree/main/P6-SparseVector/Haskell/DataStructures/Vector)
+
+***Sparse Vector (Java):*** [P6 - Sparse Vector](https://github.com/Hidden-Process/DataStructures/tree/main/P6-SparseVector/Java/dataStructures/vector)
