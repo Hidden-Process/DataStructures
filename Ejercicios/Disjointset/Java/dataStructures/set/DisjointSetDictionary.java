@@ -128,11 +128,6 @@ public class DisjointSetDictionary<T extends Comparable<? super T>> implements D
         else                     dic.insert(r2,r1);
     }
 
-    // ====================================================
-    // A partir de aqui solo para alumnos a tiempo parcial
-    // que no sigan el proceso de evaluacion continua.
-    // ====================================================
-
     /**
      * Aplana la estructura de manera que todos los elementos se asocien
      * directamente con su representante canonico.
