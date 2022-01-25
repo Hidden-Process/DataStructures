@@ -1,10 +1,3 @@
--------------------------------------------------------------------------------
--- Student's name:
--- Student's group:
---
--- Data Structures. Grado en Informática. UMA.
--------------------------------------------------------------------------------
-
 module DataStructures.Graph.EulerianCycle(isEulerian, eulerianCycle) where
 
 import DataStructures.Graph.Graph
