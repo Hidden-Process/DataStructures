@@ -21,3 +21,8 @@
 ***Sparse Vector (Haskell):*** [P6 - Sparse Vector](https://github.com/Hidden-Process/DataStructures/tree/main/P6-SparseVector/Haskell/DataStructures/Vector)
 
 ***Sparse Vector (Java):*** [P6 - Sparse Vector](https://github.com/Hidden-Process/DataStructures/tree/main/P6-SparseVector/Java/dataStructures/vector)
+
+## Bloque 4: Grafos
+
+***Orden Topológico en Digrafos (Java):*** [P7 - TopologicalSorting](https://github.com/Hidden-Process/DataStructures/tree/main/P7-TopologicalSorting)
+
