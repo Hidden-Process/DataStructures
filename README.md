@@ -26,3 +26,20 @@
 
 ***Orden Topológico en Digrafos (Java):*** [P7 - TopologicalSorting](https://github.com/Hidden-Process/DataStructures/tree/main/P7-TopologicalSorting)
 
+## Examenes
+
+***Febrero 2015:*** [TwoListDoubleEndedQueue](https://github.com/Hidden-Process/DataStructures/tree/main/Ejercicios/TwoListDoubleEndedQueue)
+
+***Febrero 2016*** [EulerianCycle] (https://github.com/Hidden-Process/DataStructures/tree/main/Ejercicios/EulerianCycle)
+
+***Febrero 2017*** [SparseVector] (https://github.com/Hidden-Process/DataStructures/tree/main/P6-SparseVector)
+
+***Septiembre 2016:*** [Huffman Coding] (https://github.com/Hidden-Process/DataStructures/tree/main/Ejercicios/HuffmanCoding)
+
+***Febrero 2018:*** [DisjointSet] (https://github.com/Hidden-Process/DataStructures/tree/main/Ejercicios/DisjointSet)
+
+***Septiembre 2018:*** [HashBiDictionary] (https://github.com/Hidden-Process/DataStructures/tree/main/Ejercicios/HashBiDictionary)
+
+***Septiembre 2020:*** [BinPacket] (https://github.com/Hidden-Process/DataStructures/tree/main/Ejercicios/BinPacket)
+
+
