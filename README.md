@@ -32,13 +32,15 @@
 
 ***Febrero 2016*** [EulerianCycle](https://github.com/Hidden-Process/DataStructures/tree/main/Ejercicios/EulerianCycle)
 
-***Febrero 2017*** [SparseVector](https://github.com/Hidden-Process/DataStructures/tree/main/P6-SparseVector)
-
 ***Septiembre 2016:*** [Huffman Coding](https://github.com/Hidden-Process/DataStructures/tree/main/Ejercicios/HuffmanCoding)
+
+***Febrero 2017*** [SparseVector](https://github.com/Hidden-Process/DataStructures/tree/main/P6-SparseVector)
 
 ***Febrero 2018:*** [DisjointSet](https://github.com/Hidden-Process/DataStructures/tree/main/Ejercicios/DisjointSet)
 
 ***Septiembre 2018:*** [HashBiDictionary](https://github.com/Hidden-Process/DataStructures/tree/main/Ejercicios/HashBiDictionary)
+
+***Febrero 2019:*** [Kruskal](https://github.com/Hidden-Process/DataStructures/tree/main/Ejercicios/Kruskal)
 
 ***Septiembre 2020:*** [BinPacket](https://github.com/Hidden-Process/DataStructures/tree/main/Ejercicios/BinPacket)
 
